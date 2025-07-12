@@ -1,4 +1,3 @@
-let price = 19.5;
 let cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
@@ -15,6 +14,7 @@ const cashRecieved = document.getElementById("cash");
 const changeDue = document.getElementById("change-due");
 const purchaseBtn = document.getElementById("purchase-btn");
 const cashInDrawer = document.querySelector("#drawer ul");
+const priceInput = document.getElementById("price");
 
 let changeList = {};
 
@@ -45,6 +45,7 @@ const displayChange = (status) =>
 }
 
 const buttonPress = () => {
+  price = parseFloat(priceInput.value);
   changeList = {};
   let cash = parseFloat(cashRecieved.value);
   let hasExactChange = true;
